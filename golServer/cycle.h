@@ -2,14 +2,26 @@
 #define CYCLE_H
 
 #include <QObject>
+#include <vector>
+#include <QDebug>
+
+#include "field.h"
 
 class Cycle : public QObject
 {
     Q_OBJECT
 public:
-    explicit Cycle(QObject *parent = nullptr);
+    Cycle(QObject *parent = nullptr, QString fieldString = "");
+    ~Cycle() override;
 
-signals:
+    QString next_generation();
+
+private:
+    Field m_field;
+    Field m_currentField;
+
+    QString fieldToString(Field& field);
+
 
 };
 
