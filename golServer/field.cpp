@@ -24,35 +24,35 @@ Field& Field::operator=(const Field& source)
     return *this;
 }
 
-int Field::get_row_size() const
+int Field::getRowSize() const
 {
   return (m_2Dvector.size());
 }
 
-int Field::get_col_size() const
+int Field::getColSize() const
 {
   return (m_2Dvector[0].size());
 }
 
-bool Field::get_cell(int row, int col) const
+bool Field::getCell(int row, int col) const
 {
   return m_2Dvector[row][col];
 }
 
-void Field::set_cell(int row, int col, bool status)
+void Field::setCell(int row, int col, bool status)
 {
   m_2Dvector[row][col] = status;
 }
 
-int Field::find_alive(int row, int col) const
+int Field::findAlive(int row, int col) const
 {
   int alive_neib = 0;
   for (int i = -1; i <= 1; i++)
   {
     for (int j = -1; j <= 1; j++)
     {
-      int row_mod = (row + i + get_row_size()) % get_row_size();
-      int col_mod = (col + j + get_col_size()) % get_col_size();
+      int row_mod = (row + i + getRowSize()) % getRowSize();
+      int col_mod = (col + j + getColSize()) % getColSize();
 
       if (m_2Dvector[row_mod][col_mod])
         alive_neib++;

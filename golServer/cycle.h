@@ -14,7 +14,7 @@ public:
     Cycle(QObject *parent = nullptr, QString fieldString = "");
     ~Cycle() override;
 
-    QString next_generation();
+    QString nextGeneration();
 
 private:
     Field m_field;

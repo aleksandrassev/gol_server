@@ -14,12 +14,12 @@ public:
     Field (const Field &source);
     Field& operator=(const Field& source);
 
-    int get_row_size() const;
-    int get_col_size() const;
-    bool get_cell(int row, int col) const;
-    void set_cell(int row, int col, bool status);
+    int getRowSize() const;
+    int getColSize() const;
+    bool getCell(int row, int col) const;
+    void setCell(int row, int col, bool status);
 
-    int find_alive(int row, int col) const;
+    int findAlive(int row, int col) const;
 
 private:
     std::vector<std::vector<bool>> m_2Dvector;
