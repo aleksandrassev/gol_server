@@ -20,11 +20,9 @@ public:
     ~MainWindow();
 
 private slots:
-//    void server_New_Connect();
-//    void socket_Read_Data();
-
+    void server_New_Connect();
+    void socket_Read_Data();
     void on_pushButton_Start_clicked();
-    void on_pushButton_Stop_clicked();
 
 private:
     Ui::MainWindow *m_ui;
