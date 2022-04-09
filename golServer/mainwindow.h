@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTcpServer>
 #include <QTcpSocket>
+#include <QTimer>
 
 #include "cycle.h"
 
@@ -23,12 +24,13 @@ private slots:
     void serverNewConnect();
     void socketReadData();
     void on_pushButton_Start_clicked();
+    void improvisedKeepAliveSocketCheck();
 
 private:
     Ui::MainWindow *m_ui;
     QTcpServer* m_server;
-    QTcpSocket* m_socket;
-
-
+    QTcpSocket* m_socketClient;
+    QTimer *m_timer;
+    bool m_isClientConnected;
 };
 #endif // MAINWINDOW_H
