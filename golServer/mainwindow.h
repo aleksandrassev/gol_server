@@ -20,13 +20,15 @@ public:
     ~MainWindow();
 
 private slots:
-    void server_New_Connect();
-    void socket_Read_Data();
+    void serverNewConnect();
+    void socketReadData();
     void on_pushButton_Start_clicked();
 
 private:
     Ui::MainWindow *m_ui;
     QTcpServer* m_server;
     QTcpSocket* m_socket;
+
+
 };
 #endif // MAINWINDOW_H
