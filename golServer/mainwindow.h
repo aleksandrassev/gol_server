@@ -29,8 +29,10 @@ private slots:
 private:
     Ui::MainWindow *m_ui;
     QTcpServer* m_server;
-    QTcpSocket* m_socketClient;
+    QTcpSocket* m_clientSocket;
     QTimer *m_timer;
-    bool m_isClientConnected;
+
+    int m_socketWriteStatus;
+
 };
 #endif // MAINWINDOW_H
