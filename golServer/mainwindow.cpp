@@ -51,6 +51,7 @@ void MainWindow::on_pushButton_Start_clicked()
         m_ui->pushButton_Start->setText("Start");
         m_ui->label_Info->setStyleSheet("font-weight: bold; color: red; font-size: 14px");
         m_ui-> label_Info->setText("Stopped!");
+        m_timer->stop();
     }
 }
 
@@ -93,6 +94,7 @@ void MainWindow::improvisedKeepAliveSocketCheck()
     {
         m_ui->label_Info->setStyleSheet("font-weight: bold; color: red; font-size: 14px");
         m_ui->label_Info->setText("Client disconnected! Waiting for client...");
+        m_timer->stop();
     }
 }
 
